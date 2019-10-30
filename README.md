@@ -1,4 +1,4 @@
-+# jnxutil
+## jnxutil
 Garmin jnx file manipulation utility for Linux. 
 ### Features: 
 * Read content of the jnx file. 
