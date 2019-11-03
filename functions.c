@@ -93,10 +93,10 @@ char *jnx2eTrex_zoom(uint jnx_zoom)
     return(zooms[i-1].eTrex);
 }
 
-char *productId2str(int productId)
+char *productId2str(uint productId)
 {
-    int i = 0;
-    while ((i < productId) & (i <= 11)) i++;
+    uint i = 0;
+    while ((i < productId) & (i <= 9)) i++;
     return(product_ids[i]);
 }
 
