@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="jnxutil" />
+		<Option platforms="Unix;" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option platforms="Unix;" />
+				<Option output="jnxutil" prefix_auto="1" extension_auto="1" />
+				<Option object_output="." />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWITH_GDAL" />
+				</Compiler>
+				<Linker>
+					<Add library="gdal" />
+				</Linker>
+			</Target>
+			<Target title="Release_w/o_GDAL">
+				<Option platforms="Unix;" />
+				<Option output="jnxutil" prefix_auto="1" extension_auto="1" />
+				<Option object_output="." />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-O2" />
+			<Add option="-Wextra" />
+			<Add option="-Wall" />
+			<Add option="-pipe" />
+			<Add option="-fno-ident" />
+			<Add option='-DPROG_NAME=&quot;\\&quot;jnxutil\\&quot;&quot;' />
+			<Add option='-DPROG_VERSION=&quot;\\&quot;0.0.1\\&quot;&quot;' />
+			<Add option="-D_GNU_SOURCE" />
+		</Compiler>
+		<Linker>
+			<Add option="-O2" />
+			<Add option="-s" />
+		</Linker>
+		<Unit filename="README.md">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="CMakeLists.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="common.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="file_functions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="functions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="jnx_functions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="jnxutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
