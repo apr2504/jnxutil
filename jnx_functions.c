@@ -235,9 +235,7 @@ void edit_jnx_file()
 	    if ((str_diff + jnx_file_free_space) < 0)
 	    {
 		printf("%s: jnx file hasn't enough free room\n", PROG_NAME);
-		free_struct_mem();
-		close_jnx_file();
-		exit(1);
+		return;
 	    }
 	    printf("# %d, old value = \"%s\", new value = \"%s\"\n",
 		    new_value_number, 

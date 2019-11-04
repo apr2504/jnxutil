@@ -28,4 +28,5 @@ endif ()
 install (TARGETS ${PROG_NAME} DESTINATION bin)
 install (FILES README.md LICENSE DESTINATION share/${PROG_NAME})
 
+add_custom_target(cppcheck COMMAND cppcheck --language=c --enable=all --template=gcc ${SOURCES})
 add_custom_target(uninstall COMMAND xargs rm < install_manifest.txt)
