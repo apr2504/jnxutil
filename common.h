@@ -140,7 +140,7 @@ extern void make_dir(char *);
 extern void change_dir(char *);
 extern void open_jnx_file();
 extern void close_jnx_file();
-extern void close_file(FILE *);
+extern void close_file(FILE **);
 extern void write_block(void *, size_t, size_t, FILE *);
 extern void write_one_block(void *, size_t, FILE *);
 extern void read_block(void *, size_t, size_t);

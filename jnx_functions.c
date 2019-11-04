@@ -173,7 +173,7 @@ void export_tiles()
 	    write_one_block(jpeg_buf, levels[i].tiles[j].size, fp_tmpfile);
 	    c++;
 	    free(jpeg_buf);
-	    close_file(fp_tmpfile);
+	    close_file(&fp_tmpfile);
 	    
 	    char **argv = NULL;
 	    argv = CSLAddString(argv, "-q");
@@ -308,7 +308,6 @@ void edit_jnx_file()
 	write_one_block(zero_buf, str_diff, tmp_ptr);
 	free(zero_buf);
     }
-    fclose(tmp_ptr);
-    exit(0);
     free(new_value);
+    close_file(&tmp_ptr);
 }

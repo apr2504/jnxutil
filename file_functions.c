@@ -70,14 +70,18 @@ void open_jnx_file()
     fp_jnxfile = open_file(jnx_file_name, "r");
 }
 
-void close_file(FILE *fptr)
+void close_file(FILE **fptr)
 {
-    fclose(fptr);
+    if (*fptr != NULL) 
+    {
+	fclose(*fptr);
+	*fptr = NULL;
+    }
 }
 
 void close_jnx_file()
 {
-    fclose(fp_jnxfile);
+    close_file(&fp_jnxfile);
 }
 
 void write_block(void *buf, size_t size, size_t num, FILE *fptr)
