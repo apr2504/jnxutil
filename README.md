@@ -10,3 +10,5 @@ Garmin jnx file manipulation utility for Linux.
 * cmake -DCMAKE_INSTALL_PREFIX="/usr" ./  # export tiles enabled
 * make
 * sudo make install
+<br />OR<br />
+* open jnxutil.cbp in CodeBlocks
