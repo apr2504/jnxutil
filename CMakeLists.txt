@@ -10,7 +10,7 @@ file(GLOB SOURCES "*.c")
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 set(CMAKE_BUILD_TYPE "Release")
-set(CMAKE_C_FLAGS_RELEASE "-Wall -Wextra -O2 -fno-ident -pipe")
+set(CMAKE_C_FLAGS_RELEASE "-Wall -O2")
 set(CMAKE_EXE_LINKER_FLAGS_RELEASE "-s")
 
 set(WITHOUT_GDAL on)
