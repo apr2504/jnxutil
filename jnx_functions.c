@@ -42,6 +42,9 @@ void check_jnx_file()
     }
 }
 
+uint elements_counter;
+struct element *elements;
+
 void read_jnx_file()
 {
     uint i;
@@ -100,6 +103,8 @@ void read_jnx_file()
 	read_uint_block("level_zoom", (i + 1));
     }
 }
+
+struct level *levels;
 
 void read_tiles_table()
 {

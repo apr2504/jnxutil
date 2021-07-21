@@ -22,6 +22,9 @@
 *******************************************************************************/
 #include "common.h"
 
+int work_mode;
+uint print_tiles_table, print_raw_values, new_value_number;
+char tiles_dir[1024];
 char *jnx_file_name;
 char *new_value = "";
 
@@ -86,7 +89,7 @@ void make_config(int argc, char **argv)
 	    break;
 
 	    case 'd':
-		ZERO_CHAR_L(tiles_dir, 512);
+		ZERO_CHAR_L(tiles_dir, 1024);
 		strcpy(tiles_dir, optarg);
 	    break;
 #endif

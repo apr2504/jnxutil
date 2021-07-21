@@ -54,7 +54,8 @@
 			);
 
 #ifdef WITH_GDAL
-#define  USAGE printf("Usage: %s -itrehV [-d directory] [-n number] [-v value] jnxfilename\n\
+#define  USAGE printf(\
+"Usage: %s -itrehV [-d directory] [-n number] [-v value] jnxfilename\n\
                -i    print info\n\
                -t    print tiles table\n\
                -r    print raw values\n\
@@ -65,7 +66,8 @@
                -h    this message and exit\n\
                -V    print version\n",PROG_NAME);
 #else
-#define  USAGE printf("Usage: %s -itrhV [-n number] [-v value] jnxfilename\n\
+#define  USAGE printf(\
+"Usage: %s -itrhV [-n number] [-v value] jnxfilename\n\
                -i    print info\n\
                -t    print tiles table\n\
                -r    print raw values\n\
@@ -121,14 +123,12 @@ enum
     TILES
 };
 
-int work_mode;
-uint print_tiles_table, elements_counter, print_raw_values, new_value_number;
-char tiles_dir[1024];
-struct element *elements;
-struct level *levels;
-
-extern char *jnx_file_name;
-extern char *new_value;
+extern int work_mode;
+extern uint print_tiles_table, elements_counter, print_raw_values, new_value_number;
+extern char tiles_dir[];
+extern char *jnx_file_name, *new_value;
+extern struct element *elements;
+extern struct level *levels;
 
 extern FILE *open_file(char *, char *);
 extern char *jnx_grad2grad(char*, int, int);
